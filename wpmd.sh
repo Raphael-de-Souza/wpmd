@@ -13,14 +13,13 @@ export NCURSES_NO_UTF8_ACS=1
 version=$(hostnamectl | grep -oP "(?<=\Operating System:\s)(\w+)")
 
 #Update the Linux
-#sudo apt-get -y update
+sudo apt-get -y update
 
 #Verify Linux distro
 echo $version
 case $version in
 	"Ubuntu"|"Debian")
-		#sudo apt-get -y install dialog
-		#gdialog --menu "Plese select:" 0 0 0 1 "Wizard install" 2 "Personalized install"
+		sudo apt-get -y install dialog
 		
 		modeSel=$(dialog --backtitle "WORDPRESS + MYSQL DOCKER CONTAINERS - INSTALATION AND CONFIGURATION" \
 				 --clear \
@@ -127,5 +126,9 @@ case $version in
 		;;
 	*)
 esac
+
+#Uninstall
+sudo apt-get -y remove dialog
+sudo apt-get -y remove git
 
 
