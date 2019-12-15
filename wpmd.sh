@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+#Update the Linux
+sudo apt-get -y update
+
 logFunc(){
 cmd=$1
 line=$2
@@ -11,9 +14,6 @@ export NCURSES_NO_UTF8_ACS=1
 
 #Get the name of Linux distro
 version=$(hostnamectl | grep -oP "(?<=\Operating System:\s)(\w+)")
-
-#Update the Linux
-sudo apt-get -y update
 
 #Verify Linux distro
 echo $version
