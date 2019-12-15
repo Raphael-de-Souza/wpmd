@@ -3,4 +3,4 @@ Wordpress-MySQL-Docker : A simple graphical way to deploy a Wordpress with MySQL
 
 To ease execute without need download anything just execute the command below in the Linux terminal:
 <br/>
-bash <(curl -s https://raw.githubusercontent.com/Raphael-de-Souza/wpmd/master/wpmd.sh)
+sudo bash <(curl -s https://raw.githubusercontent.com/Raphael-de-Souza/wpmd/master/wpmd.sh)
